@@ -29,6 +29,10 @@ if NETDEVICES
 config MII
 	tristate
 
+config ENET_RMII
+	bool "config ENET to RMII mode"
+	depends on FEC
+
 config NET_CORE
 	default y
 	bool "Network core driver support"

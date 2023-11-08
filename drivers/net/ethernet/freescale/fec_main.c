@@ -2212,7 +2212,11 @@ static int fec_enet_mii_probe(struct net_device *ndev)
 		}
 	} else {
 		/* check for attached phy */
+#ifdef CONFIG_ENET_RMII
+		for (phy_id = 1; (phy_id < PHY_MAX_ADDR); phy_id++) {
+#else
 		for (phy_id = 0; (phy_id < PHY_MAX_ADDR); phy_id++) {
+#endif
 			if (!mdiobus_is_registered_device(fep->mii_bus, phy_id))
 				continue;
 			if (dev_id--)
@@ -2238,6 +2242,7 @@ static int fec_enet_mii_probe(struct net_device *ndev)
 		return PTR_ERR(phy_dev);
 	}
 
+#ifndef CONFIG_ENET_RMII
 	/* mask with MAC supported features */
 	if (fep->quirks & FEC_QUIRK_HAS_GBIT) {
 		phy_set_max_speed(phy_dev, 1000);
@@ -2248,6 +2253,7 @@ static int fec_enet_mii_probe(struct net_device *ndev)
 #endif
 	}
 	else
+#endif
 		phy_set_max_speed(phy_dev, 100);
 
 	fep->link = 0;
