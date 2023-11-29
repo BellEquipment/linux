@@ -481,7 +481,7 @@ dtb-$(CONFIG_SOC_IMX6Q) += \
 	imx6q-b450v3.dtb \
 	imx6q-b650v3.dtb \
 	imx6q-b850v3.dtb \
-	imx6q-ccimx6-bellequipment-mm3-development \
+	imx6q-ccimx6-bellequipment-mm3-development.dtb \
 	imx6q-ccimx6sbc.dtb \
 	imx6q-ccimx6sbc-id129.dtb \
 	imx6q-ccimx6sbc-id130.dtb \
