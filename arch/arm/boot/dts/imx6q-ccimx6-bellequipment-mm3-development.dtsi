@@ -14,8 +14,8 @@
 
 / {
 	model = "ConnectCore 6 Bell Equipment Memory Module 3.";
-	compatible = "bell,ccimx6-bellequipment-mm3";
-	bell,machine,name = "ccimx6-bellequipment-mm3";
+	compatible = "digi,ccimx6", "fsl,imx6q";
+	digi,machine,name = "ccimx6-bellequipment-mm3-development";
 
 	aliases {
 		rtc0 = &rtc_read;
