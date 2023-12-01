@@ -325,6 +325,42 @@
 		};
 	};
 
+/* SD1 not used */
+	usdhc1 {
+		pinctrl_usdhc1: usdhc1 {
+			fsl,pins = <
+				MX6QDL_PAD_SD1_CMD__SD1_CMD    0x17071
+				MX6QDL_PAD_SD1_CLK__SD1_CLK    0x10071
+				MX6QDL_PAD_SD1_DAT0__SD1_DATA0 0x17071
+				MX6QDL_PAD_SD1_DAT1__SD1_DATA1 0x17071
+				MX6QDL_PAD_SD1_DAT2__SD1_DATA2 0x17071
+				MX6QDL_PAD_SD1_DAT3__SD1_DATA3 0x17071
+			>;
+		};
+
+		pinctrl_usdhc1_100mhz: usdhc1-100mhz {
+			fsl,pins = <
+				MX6QDL_PAD_SD1_CMD__SD1_CMD    0x170B1
+				MX6QDL_PAD_SD1_CLK__SD1_CLK    0x100B1
+				MX6QDL_PAD_SD1_DAT0__SD1_DATA0 0x170B1
+				MX6QDL_PAD_SD1_DAT1__SD1_DATA1 0x170B1
+				MX6QDL_PAD_SD1_DAT2__SD1_DATA2 0x170B1
+				MX6QDL_PAD_SD1_DAT3__SD1_DATA3 0x170B1
+			>;
+		};
+
+		pinctrl_usdhc1_200mhz: usdhc1-200mhz {
+			fsl,pins = <
+				MX6QDL_PAD_SD1_CMD__SD1_CMD    0x170F1
+				MX6QDL_PAD_SD1_CLK__SD1_CLK    0x100F1
+				MX6QDL_PAD_SD1_DAT0__SD1_DATA0 0x170F1
+				MX6QDL_PAD_SD1_DAT1__SD1_DATA1 0x170F1
+				MX6QDL_PAD_SD1_DAT2__SD1_DATA2 0x170F1
+				MX6QDL_PAD_SD1_DAT3__SD1_DATA3 0x170F1
+			>;
+		};
+	};
+
 /* Done - SD card */
 	usdhc2 {
 		pinctrl_usdhc2: usdhc2 {
